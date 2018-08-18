@@ -1,10 +1,10 @@
 module.exports = function (app) {
     app.get('/api/user', findAllUsers);
     app.post('/api/user', createUser);
-    app.get('/api/profile', profile);
+    app.get('/api/user/profile', profile);
     app.get('/api/user/:userId', findUserById);
-    app.post('/api/logout', logout);
-    app.post('/api/login',login);
+    app.post('/api/user/logout', logout);
+    app.post('/api/user/login',login);
     app.get('/api/user/:userId/delete', deleteUser);
     app.put('/api/user/:userId', updateUser);
 

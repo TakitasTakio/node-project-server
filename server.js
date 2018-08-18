@@ -74,6 +74,16 @@ var adminService = require('./services/admin.service.server');
 adminService(app);
 var userService = require('./services/user.service.server');
 userService(app);
+var infoService = require('./services/info.service.server');
+infoService(app);
+var couchService = require('./services/couch.service.server');
+couchService(app);
+var info2Service = require('./services/info2.service.server');
+info2Service(app);
+var premService = require('./services/prem.service.server');
+premService(app);
+var premier2Service = require('./services/premier2.service.server');
+premier2Service(app);
 
 
 
