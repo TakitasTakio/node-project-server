@@ -91,9 +91,14 @@ var unitService = require('./services/unit.service.server');
 unitService(app);
 var lessonService = require('./services/lesson.service.server');
 lessonService(app);
+var meetingService = require('./services/meeting.service.server');
+meetingService(app);
 
 var newsService = require('./services/news.service.server');
 newsService(app);
+
+var matchService = require('./services/match.service.server');
+matchService(app);
 
 
 

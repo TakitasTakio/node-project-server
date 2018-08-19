@@ -1,7 +1,7 @@
 module.exports = function (app) {
     app.get('/api/couch', findAllCouch);
     app.post('/api/couch', createCouch);
-    app.get('/api/profile', profile);
+    app.get('/api/couch/profile', profile);
     app.get('/api/couch/:couchId', findCouchById);
     app.post('/api/couch/logout', logout);
     app.post('/api/couch/login',login);
@@ -27,6 +27,11 @@ module.exports = function (app) {
             })
     }
 
+    function profile(req, res) {
+        res.send(req.session['currentCouch']);
+
+    }
+
     function findAllCouch(req, res) {
         couchModel.findAllCouch()
             .then(function (couchs) {
@@ -47,10 +52,7 @@ module.exports = function (app) {
 
     }
 
-    function profile(req, res) {
-        res.send(req.session['currentCouch']);
 
-    }
 
     function deleteCouch(req, res) {
         var couchId = req.params['couchId'];
