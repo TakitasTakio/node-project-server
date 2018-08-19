@@ -84,6 +84,16 @@ var premService = require('./services/prem.service.server');
 premService(app);
 var premier2Service = require('./services/premier2.service.server');
 premier2Service(app);
+var courseService = require('./services/course.service.server');
+courseService(app);
+
+var unitService = require('./services/unit.service.server');
+unitService(app);
+var lessonService = require('./services/lesson.service.server');
+lessonService(app);
+
+var newsService = require('./services/news.service.server');
+newsService(app);
 
 
 
